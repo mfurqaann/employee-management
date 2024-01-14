@@ -30,7 +30,12 @@ export class EmployeeService {
     return this.http.post(`${this.baseUrl}`, data);
   }
 
-  // getDataByUsernameAndGroup(group: string, username: string) {
-  //   return this.http.get(`${this.baseUrl}?group=${group}&username=${username}`);
-  // }
+  editEmployee(id: string, employee: Employee) {
+    const data = employee;
+    return this.http.put(`${this.baseUrl}${id}`, data);
+  }
+
+  deleteEmployee(id: string) {
+    return this.http.delete(`${this.baseUrl}${id}`);
+  }
 }

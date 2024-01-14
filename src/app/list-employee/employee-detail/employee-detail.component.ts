@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Route } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+
 import { Subscription } from 'rxjs';
+
 import { Employee } from 'src/app/shared/employee.model';
 import { EmployeeService } from 'src/app/shared/employee.service';
 

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { Employee } from 'src/app/shared/employee.model';
 
 @Component({
@@ -9,6 +10,7 @@ import { Employee } from 'src/app/shared/employee.model';
 })
 export class EmployeeItemComponent {
   @Input() employee: Employee;
+  @Output() deleteEmployeeEvent = new EventEmitter<string>();
 
   constructor(private router: Router) {}
 
@@ -21,9 +23,6 @@ export class EmployeeItemComponent {
   }
 
   onDetailEmployee(id: string) {
-    const queryParams = {
-      id: id,
-    };
     this.router.navigateByUrl(`list-employee/${id}`);
   }
 }

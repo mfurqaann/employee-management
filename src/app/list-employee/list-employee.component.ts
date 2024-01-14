@@ -1,13 +1,9 @@
-import {
-  Component,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { Subscription, map } from 'rxjs';
-import { Event, Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
+
+import { Subscription } from 'rxjs';
+
 import { EmployeeService } from '../shared/employee.service';
 import { Employee } from '../shared/employee.model';
 
@@ -36,15 +32,12 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
         this.listEmployee = employees;
       });
 
+    this.loadEventPaginator();
     this.searchTextInLocalStorage();
   }
 
   updateSearch() {
     localStorage.setItem('searchText', this.searchText);
-  }
-
-  onAddNewEmployee() {
-    this.router.navigateByUrl('add-employee');
   }
 
   handlePageEvent(event: PageEvent) {
@@ -63,6 +56,15 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
       .subscribe((response: Array<Employee>) => {
         this.listEmployee = response;
       });
+  }
+
+  private loadEventPaginator() {
+    this.handlePageEvent({
+      pageIndex: 0,
+      previousPageIndex: 0,
+      pageSize: 5,
+      length: 0,
+    });
   }
 
   private searchTextInLocalStorage() {

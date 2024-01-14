@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './login-employee.component.html',
   styleUrls: ['./login-employee.component.scss'],
 })
-export class LoginEmployeeComponent implements OnInit {
+export class LoginEmployeeComponent {
   constructor(private router: Router) {}
 
   @ViewChild('f') loginForm: NgForm;
@@ -16,8 +16,6 @@ export class LoginEmployeeComponent implements OnInit {
     username: null,
     password: null,
   };
-
-  ngOnInit(): void {}
 
   onSubmit() {
     if (!this.loginForm.valid) {

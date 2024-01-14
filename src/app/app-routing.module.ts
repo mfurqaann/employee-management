@@ -10,7 +10,16 @@ const routes: Routes = [
   { path: 'login', component: LoginEmployeeComponent },
   { path: 'list-employee', component: ListEmployeeComponent },
   { path: 'list-employee/:id', component: EmployeeDetailComponent },
-  { path: 'add-employee', component: AddEmployeeFormPageComponent },
+  {
+    path: 'add-employee',
+    component: AddEmployeeFormPageComponent,
+    data: { edit: false },
+  },
+  {
+    path: 'list-employee/edit/:id',
+    component: AddEmployeeFormPageComponent,
+    data: { edit: true },
+  },
 ];
 
 @NgModule({

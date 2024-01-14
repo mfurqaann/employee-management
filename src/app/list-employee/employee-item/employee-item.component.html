@@ -10,10 +10,10 @@
     </a>
     <p class="card-text">{{ employeeGroup }}</p>
     <div class="d-flex justify-content-center">
-      <button class="btn btn-warning mr-2">Edit</button>
-      <button class="btn btn-danger" (click)="onDetailEmployee(employee.id)">
-        Delete
+      <button class="btn btn-warning mr-2" [routerLink]="['edit', employee.id]">
+        Edit
       </button>
+      <button class="btn btn-danger">Delete</button>
     </div>
   </div>
 </div>
