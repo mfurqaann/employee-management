@@ -1,8 +1,16 @@
 .container {
-    border: solid;
+    margin-top: 40px;
+    padding: 20px 0;
+    border: solid 0.3px grey;
+    border-radius: 10px;
 
     form {
+
         input {
+            width: 400px;
+        }
+
+        mat-form-field {
             width: 400px;
         }
 
