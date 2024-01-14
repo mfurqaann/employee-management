@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Employee } from 'src/app/login-employee/shared/employee.model';
+import { Employee } from 'src/app/shared/employee.model';
 
 @Component({
   selector: 'app-employee-item',

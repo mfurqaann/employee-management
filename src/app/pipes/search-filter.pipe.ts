@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Employee } from '../login-employee/shared/employee.model';
+import { Employee } from '../shared/employee.model';
 
 @Pipe({
   name: 'searchFilter',

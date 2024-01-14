@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Employee } from 'src/app/login-employee/shared/employee.model';
+import { Employee } from 'src/app/shared/employee.model';
+
 import { EmployeeService } from 'src/app/shared/employee.service';
 
 @Component({
@@ -50,6 +51,10 @@ export class AddEmployeeFormPageComponent implements OnInit {
       description: this.formEmployee.value.description,
     };
 
+    this.submitEmployee(employee);
+  }
+
+  private submitEmployee(employee: Employee) {
     this.employeeService.addNewEmployee(employee).subscribe(console.log);
   }
 }

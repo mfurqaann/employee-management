@@ -5,11 +5,11 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import { Employee } from '../login-employee/shared/employee.model';
 import { Subscription, map } from 'rxjs';
 import { Event, Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { EmployeeService } from '../shared/employee.service';
+import { Employee } from '../shared/employee.model';
 
 @Component({
   selector: 'app-list-employee',

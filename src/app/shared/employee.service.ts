@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Employee } from 'src/app/login-employee/shared/employee.model';
+import { Employee } from './employee.model';
 
 @Injectable()
 export class EmployeeService {
