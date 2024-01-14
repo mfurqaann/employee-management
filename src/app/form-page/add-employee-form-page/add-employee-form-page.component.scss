@@ -1,0 +1,17 @@
+.container {
+    border: solid;
+
+    form {
+        input {
+            width: 400px;
+        }
+
+        .form-group {
+            margin: 0 30px;
+        }
+
+        .form-group small {
+            color: red !important;
+        }
+    }
+}

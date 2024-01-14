@@ -1,0 +1,136 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "birthDate": "1990-05-15T00:00:00Z",
+      "basicSalary": 50000,
+      "status": "Active",
+      "group": "IT",
+      "description": "Senior Developer"
+    },
+    {
+      "id": "2",
+      "username": "jane_smith",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "birthDate": "1985-08-22T00:00:00Z",
+      "basicSalary": 60000,
+      "status": "Active",
+      "group": "HR",
+      "description": "HR Manager"
+    },
+    {
+      "id": "3",
+      "username": "mark_jackson",
+      "firstName": "Mark",
+      "lastName": "Jackson",
+      "email": "mark.jackson@example.com",
+      "birthDate": "1992-03-10T00:00:00Z",
+      "basicSalary": 55000,
+      "status": "Inactive",
+      "group": "Finance",
+      "description": "Accountant"
+    },
+    {
+      "id": "4",
+      "username": "emily_clark",
+      "firstName": "Emily",
+      "lastName": "Clark",
+      "email": "emily.clark@example.com",
+      "birthDate": "1988-12-05T00:00:00Z",
+      "basicSalary": 70000,
+      "status": "Active",
+      "group": "Marketing",
+      "description": "Marketing Specialist"
+    },
+    {
+      "id": "5",
+      "username": "peter_wilson",
+      "firstName": "Peter",
+      "lastName": "Wilson",
+      "email": "peter.wilson@example.com",
+      "birthDate": "1995-06-18T00:00:00Z",
+      "basicSalary": 48000,
+      "status": "Active",
+      "group": "R&D",
+      "description": "Junior Developer"
+    },
+    {
+      "id": "6",
+      "username": "susan_jones",
+      "firstName": "Susan",
+      "lastName": "Jones",
+      "email": "susan.jones@example.com",
+      "birthDate": "1983-09-30T00:00:00Z",
+      "basicSalary": 75000,
+      "status": "Active",
+      "group": "Management",
+      "description": "CEO"
+    },
+    {
+      "id": "7",
+      "username": "michael_smith",
+      "firstName": "Michael",
+      "lastName": "Smith",
+      "email": "michael.smith@example.com",
+      "birthDate": "1991-07-12T00:00:00Z",
+      "basicSalary": 62000,
+      "status": "Active",
+      "group": "Legal",
+      "description": "Recruitment Specialist"
+    },
+    {
+      "id": "8",
+      "username": "linda_davis",
+      "firstName": "Linda",
+      "lastName": "Davis",
+      "email": "linda.davis@example.com",
+      "birthDate": "1987-04-25T00:00:00Z",
+      "basicSalary": 58000,
+      "status": "Active",
+      "group": "Business Development",
+      "description": "Financial Analyst"
+    },
+    {
+      "id": "9",
+      "username": "alex_robinson",
+      "firstName": "Alex",
+      "lastName": "Robinson",
+      "email": "alex.robinson@example.com",
+      "birthDate": "1993-11-08T00:00:00Z",
+      "basicSalary": 51000,
+      "status": "Inactive",
+      "group": "Customer Service",
+      "description": "Social Media Coordinator"
+    },
+    {
+      "id": "10",
+      "username": "david_martin",
+      "firstName": "David",
+      "lastName": "Martin",
+      "email": "david.martin@example.com",
+      "birthDate": "1989-02-14T00:00:00Z",
+      "basicSalary": 69000,
+      "status": "Active",
+      "group": "General Administration",
+      "description": "System Administrator"
+    },
+    {
+      "id": "dummy",
+      "username": "Tes",
+      "firstName": "Tes123",
+      "lastName": "Tes123456",
+      "email": "DataTes@gmail.com",
+      "birthDate": "2024-01-30T17:00:00.000Z",
+      "basicSalary": 2321,
+      "status": "active",
+      "group": "HR",
+      "description": "Bagoes"
+    }
+  ]
+}

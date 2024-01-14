@@ -1,0 +1,159 @@
+<div class="container">
+  <h3>Add Employee</h3>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          required
+          ngModel
+          #email="ngModel"
+        />
+        <small
+          *ngIf="!email.value && email.touched"
+          class="form-text text-muted"
+          >Email harus di isi</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class="form-control"
+          required
+          ngModel
+          #username="ngModel"
+        />
+        <small
+          *ngIf="!username.value && username.touched"
+          class="form-text text-muted"
+          >username harus di isi</small
+        >
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          class="form-control"
+          required
+          ngModel
+          #firstname="ngModel"
+        />
+        <small
+          *ngIf="!firstname.value && firstname.touched"
+          class="form-text text-muted"
+          >First Name harus di isi</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          class="form-control"
+          required
+          ngModel
+          #lastname="ngModel"
+        />
+        <small
+          *ngIf="!lastname.value && lastname.touched"
+          class="form-text text-muted"
+          >Last Name harus di isi</small
+        >
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="basicsalary">Basic Salary</label>
+        <input
+          type="number"
+          name="basicsalary"
+          id="basicsalary"
+          class="form-control"
+          required
+          ngModel
+          #basicSalary="ngModel"
+        />
+        <small
+          *ngIf="!basicSalary.value && basicSalary.touched"
+          class="form-text text-muted"
+          >Basic Salary harus di isi</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="group">Group </label>
+        <div>
+          <mat-form-field class="mr-3">
+            <mat-label>Group</mat-label>
+            <mat-select [(value)]="selectedGroup">
+              <mat-option *ngFor="let group of groups" [value]="group">{{
+                group
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="birthdate">Birthdate (datepicker)</label>
+        <div>
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput ngModel name="birthdate" [matDatepicker]="picker" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="status">Status </label>
+        <div>
+          <mat-form-field class="mr-3">
+            <mat-label>Status</mat-label>
+            <mat-select [(value)]="selectedStatus">
+              <mat-option>None</mat-option>
+              <mat-option value="active">Active</mat-option>
+              <mat-option value="inactive">Inactive</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Description</label>
+        <input
+          type="text"
+          name="description"
+          class="form-control"
+          required
+          ngModel
+          #description="ngModel"
+        />
+        <small
+          *ngIf="!description.value && description.touched"
+          class="form-text text-muted"
+          >Deskripsi harus di isi</small
+        >
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

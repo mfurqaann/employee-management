@@ -1,0 +1,38 @@
+.container {
+
+    form {
+        border: 0.2 solid;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+        padding: 20px;
+        width: 500px;
+        height: 450px;
+        margin: 50px auto;
+
+        position: relative;
+
+        input#username.ng-invalid.ng-touched {
+            border: solid red;
+        }
+
+        input#password.ng-invalid.ng-touched {
+            border: solid red;
+        }
+
+        small.text-invalid {
+            color: red;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .form-footer-text {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

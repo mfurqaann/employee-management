@@ -1,0 +1,19 @@
+<div class="card m-3">
+  <img
+    src="https://pbs.twimg.com/profile_images/1469062206377582600/8uH6FfBy_400x400.png"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body text-center">
+    <a (click)="onDetailEmployee(employee.id)" class="card-fullname">
+      <h5 class="card-title">{{ employeeFullName }}</h5>
+    </a>
+    <p class="card-text">{{ employeeGroup }}</p>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-warning mr-2">Edit</button>
+      <button class="btn btn-danger" (click)="onDetailEmployee(employee.id)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
