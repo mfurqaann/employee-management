@@ -6,16 +6,18 @@ import { Employee } from 'src/app/shared/employee.model';
 import { EmployeeService } from 'src/app/shared/employee.service';
 
 @Component({
-  selector: 'app-add-employee-form-page',
-  templateUrl: './add-employee-form-page.component.html',
-  styleUrls: ['./add-employee-form-page.component.scss'],
+  selector: 'app-employee-form-page',
+  templateUrl: './employee-form-page.component.html',
+  styleUrls: ['./employee-form-page.component.scss'],
 })
-export class AddEmployeeFormPageComponent implements OnInit {
+export class EmployeeFormPageComponent implements OnInit {
   readonly isEdit = !!this.route.snapshot.data['edit'];
   id: string;
   title: string;
   selectedStatus: string;
   selectedGroup: string;
+  minDate: Date;
+  maxDate: Date;
   groups: Array<string> = [];
   @ViewChild('f') formEmployee: NgForm;
 
@@ -47,6 +49,8 @@ export class AddEmployeeFormPageComponent implements OnInit {
       'Customer Service',
       'General Administration',
     ];
+
+    this.validationDate();
   }
 
   onSubmit() {
@@ -84,5 +88,15 @@ export class AddEmployeeFormPageComponent implements OnInit {
     this.employeeService.editEmployee(id, employee).subscribe();
     window.alert('Berhasil Update Employee');
     this.router.navigateByUrl('/list-employee');
+  }
+
+  private validationDate() {
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentYear - 20, 0, 1);
+
+    const today = new Date();
+
+    this.maxDate = new Date(currentYear + 1, 0, 0);
+    this.maxDate = this.maxDate > today ? today : this.maxDate;
   }
 }

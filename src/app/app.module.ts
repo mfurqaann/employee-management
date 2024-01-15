@@ -24,7 +24,7 @@ import { EmployeeItemComponent } from './list-employee/employee-item/employee-it
 import { EmployeeDetailComponent } from './list-employee/employee-detail/employee-detail.component';
 import { ToRupiahPipe } from './pipes/to-rupiah.pipe';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
-import { AddEmployeeFormPageComponent } from './form-page/add-employee-form-page/add-employee-form-page.component';
+import { EmployeeFormPageComponent } from './form-page/employee-form-page/employee-form-page.component';
 import { EmployeeService } from './shared/employee.service';
 
 @NgModule({
@@ -37,7 +37,7 @@ import { EmployeeService } from './shared/employee.service';
     EmployeeDetailComponent,
     ToRupiahPipe,
     SearchFilterPipe,
-    AddEmployeeFormPageComponent,
+    EmployeeFormPageComponent,
   ],
   imports: [
     AppRoutingModule,

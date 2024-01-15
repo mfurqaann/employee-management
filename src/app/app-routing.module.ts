@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginEmployeeComponent } from './login-employee/login-employee.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { EmployeeDetailComponent } from './list-employee/employee-detail/employee-detail.component';
-import { AddEmployeeFormPageComponent } from './form-page/add-employee-form-page/add-employee-form-page.component';
+import { EmployeeFormPageComponent } from './form-page/employee-form-page/employee-form-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -12,12 +12,12 @@ const routes: Routes = [
   { path: 'list-employee/:id', component: EmployeeDetailComponent },
   {
     path: 'add-employee',
-    component: AddEmployeeFormPageComponent,
+    component: EmployeeFormPageComponent,
     data: { edit: false },
   },
   {
     path: 'list-employee/edit/:id',
-    component: AddEmployeeFormPageComponent,
+    component: EmployeeFormPageComponent,
     data: { edit: true },
   },
 ];

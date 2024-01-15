@@ -16,8 +16,12 @@ export class SearchFilterPipe implements PipeTransform {
     // Filter items berdasarkan aturan AND
     return items.filter((item) =>
       searchTerms.every((term) =>
-        ['username', 'group'].some((property) =>
-          item[property].toString().toLowerCase().includes(term)
+        ['fullName', 'group'].some((property) =>
+          property === 'fullName'
+            ? (item['firstName'] + ' ' + item['lastName'])
+                .toLowerCase()
+                .includes(term)
+            : item[property].toString().toLowerCase().includes(term)
         )
       )
     );

@@ -1,6 +1,5 @@
 {
-  "employees": 
-  [
+  "employees": [
     {
       "id": "1",
       "username": "beulah_hayes",
@@ -1190,16 +1189,16 @@
       "description": "Accountant"
     },
     {
-      "id": "100",
-      "username": "york_santana",
-      "firstName": "Moreno",
-      "lastName": "Wright",
-      "email": "morenowright@sureplex.com",
-      "birthDate": "1970-07-10T00:00:00-07:00",
-      "basicSalary": 49495,
-      "status": "Inactive",
-      "group": "HR",
-      "description": "Specialist"
+      "id": "9999",
+      "username": "Anna",
+      "firstName": "muhammad",
+      "lastName": "furqan",
+      "email": "mfurrqaan@gmail.com",
+      "birthDate": "2024-01-18T17:00:00.000Z",
+      "basicSalary": 40000000,
+      "status": "active",
+      "group": "Marketing",
+      "description": "Deskripsi"
     }
   ]
 }

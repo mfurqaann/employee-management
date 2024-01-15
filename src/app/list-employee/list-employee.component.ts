@@ -15,24 +15,22 @@ import { Employee } from '../shared/employee.model';
 export class ListEmployeeComponent implements OnInit, OnDestroy {
   searchText: string;
   listEmployee: Array<Employee>;
-  pageSize: number = 10;
+  pageSize: number;
   employeeSubscription: Subscription = new Subscription();
-  textPlaceHolder: string = 'Search by username and group';
+  textPlaceHolder: string = 'Search by name and group';
   selected: string;
 
-  constructor(
-    private employeeService: EmployeeService,
-    private router: Router
-  ) {}
+  constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {
     this.employeeSubscription = this.employeeService
       .getEmployees()
       .subscribe((employees: Array<Employee>) => {
         this.listEmployee = employees;
+        this.pageSize = this.listEmployee.length;
+        this.loadEventPaginator();
       });
 
-    this.loadEventPaginator();
     this.searchTextInLocalStorage();
   }
 
@@ -63,7 +61,7 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
       pageIndex: 0,
       previousPageIndex: 0,
       pageSize: 5,
-      length: 0,
+      length: this.pageSize,
     });
   }
 

@@ -5,8 +5,8 @@
       <div class="form-group">
         <label for="email">Email address</label>
         <input
-          type="email"
           name="email"
+          type="email"
           id="email"
           class="form-control"
           required
@@ -33,7 +33,7 @@
         <small
           *ngIf="!username.value && username.touched"
           class="form-text text-muted"
-          >username harus di isi</small
+          >Username harus di isi</small
         >
       </div>
     </div>
@@ -111,7 +111,14 @@
         <div>
           <mat-form-field>
             <mat-label>Choose a date</mat-label>
-            <input matInput ngModel name="birthdate" [matDatepicker]="picker" />
+            <input
+              matInput
+              ngModel
+              name="birthdate"
+              [matDatepicker]="picker"
+              [min]="minDate"
+              [max]="maxDate"
+            />
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle
               matIconSuffix
