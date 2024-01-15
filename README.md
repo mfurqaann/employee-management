@@ -34,7 +34,7 @@ Pastikan Anda telah menginstal:
 4. Jalankan json-server untuk menyimulasikan backend:
 
    ```bash
-   json-server --watch db.json
+   npx json-server db.json
    ```
 
 5. Jalankan aplikasi Angular:
