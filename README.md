@@ -1,4 +1,4 @@
-# Nama Proyek
+# Employee Management App
 
 Proyek ini di untuk simulasi applikasi manajemen karyawan.
 
