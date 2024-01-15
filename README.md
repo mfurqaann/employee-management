@@ -2,6 +2,10 @@
 
 Proyek ini di untuk simulasi applikasi manajemen karyawan.
 
+## Live Demo
+
+Proyek ini dapat diakses secara live melalui Vercel. Dengan [URL Live Demo](https://employee-management-fkzb0jo4t-mfurqaann.vercel.app/login).
+
 ## Prasyarat
 
 Pastikan Anda telah menginstal:
